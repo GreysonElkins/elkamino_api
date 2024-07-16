@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Greyson's Blog</title>
+    </head>
+    <body>
+        <h2>It's a Blog</h2>
+        {% if blog_entries %}
+        <table>
+            {% for entry in blog_entries %}
+            <tr>
+                <td>
+                    <a href="{% url 'blog:entry' entry.id %}">
+                        <h3>{{ entry.title }}</h3>
+                    </a>
+                </td>
+                <td><h4>| {{ entry.subtitle }} | </h4></td>
+                <td>{{ entry.pub_date }} </td>
+            </tr>
+            {% endfor %}
+        <table>
+        {% else %}
+        <p>It doesn't have any entries yet though</p>
+        {% endif %}
+    </body>
+</html>
