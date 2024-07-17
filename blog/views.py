@@ -1,5 +1,3 @@
-from simplejson import dumps
-
 from django.http import HttpResponse
 from django.core.serializers import serialize
 from django.views import generic
