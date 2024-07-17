@@ -5,9 +5,9 @@
     </head>
     <body>
         <h2>It's a Blog</h2>
-        {% if blog_entries %}
+        {% if output %}
         <table>
-            {% for entry in blog_entries %}
+            {% for entry in output %}
             <tr>
                 <td>
                     <a href="{% url 'blog:entry' entry.id %}">
