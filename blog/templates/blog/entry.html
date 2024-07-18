@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{{ entry.title }}</title>    
+        <title>{{output.title}}</title>    
     </head>
     <body>
         <a href="{% url 'blog:index' %}">back to all entries</a>
-        <h2>{{entry.title}}</h2>
-        <h3>{{entry.subtitle}}</h4>
-        <p>{{entry.content}}</p>
+        <h2>{{output.title}}</h2>
+        <h3>{{output.subtitle}}</h4>
+        <p>{{output.content}}</p>
         <p> 
-            - {{entry.author}}<br/>
-            {{entry.pub_date}}
+            - {{output.author}}<br/>
+            {{output.pub_date}}
         </p>
     </body>
 </html>
