@@ -5,5 +5,5 @@ from . import views
 app_name='onSpot'
 urlpatterns=[
     path('', views.index, name='index'),
-    path('auth', views.get_access_token, name='auth')
+    path('auth', views.auth, name='auth')
 ]
