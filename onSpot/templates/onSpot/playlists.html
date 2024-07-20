@@ -1,0 +1,14 @@
+<h1>Playlist</h1>
+
+<table>
+    <thead>
+
+    </thead>
+    <tbody>
+        {% for item in playlist.items %}
+        <tr>
+            <td>{{item.track.name}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
