@@ -5,5 +5,29 @@
     </head>
     <body>
         <h1>onSpot</h1>
+        <table>
+            <tbody>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>Playlist</td>
+                        <td>Public</td>
+                        <td>Songs</td>
+                        <td>Author</td>
+                    </tr>
+                </thead>
+                {% for item in data.items %}
+                <tr>
+                    <td>
+                        <img src="{{ item.images.1.url }}" width="60px" height = "60px"/>
+                    </td>
+                    <td><a href="playlists/{{ item.id }}" >{{ item.name }}</a></td>
+                    <td>{{ item.tracks.total }}</td>
+                    <td><input type="checkbox" checked={{item.public}} /></td>
+                    <td>{{ item.owner.display_name }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </body>
 </html>
